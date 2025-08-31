@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Counter({ initial = 0 }: { initial?: number }) {
+const Counter = ({ initial = 0 }: { initial?: number }) => {
   const [value, setValue] = useState(initial);
   const [stepText, setStepText] = useState("1");
   const parsed = Number(stepText);
@@ -19,4 +19,6 @@ export default function Counter({ initial = 0 }: { initial?: number }) {
       <button onClick={() => setValue((v) => v - step)}>Dec</button>
     </div>
   );
-}
+};
+
+export default Counter;
